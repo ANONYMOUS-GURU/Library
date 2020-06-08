@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage">
+
+    <TextView
+        android:id="@+id/LogView"
+        android:layout_width="291dp"
+        android:layout_height="58dp"
+        android:fontFamily="monospace"
+        android:text="Create New User"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/username_txt_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/LogView"
+        app:layout_constraintTop_toBottomOf="@+id/LogView" />
+
+    <EditText
+        android:id="@+id/password_txt_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/username_txt_log"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username_txt_log"
+        app:layout_constraintTop_toBottomOf="@+id/submitUserImageLogin" />
+
+    <EditText
+        android:id="@+id/conf_password_txt_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/password_txt_log"
+        app:layout_constraintStart_toStartOf="@+id/password_txt_log"
+        app:layout_constraintTop_toBottomOf="@+id/password_txt_log" />
+
+    <Button
+        android:id="@+id/confirm_bt_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/exit_bt_log"
+        app:layout_constraintStart_toStartOf="@+id/conf_password_txt_log"
+        app:layout_constraintTop_toBottomOf="@+id/conf_password_txt_log" />
+
+    <Button
+        android:id="@+id/exit_bt_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="EXIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toEndOf="@+id/confirm_bt_log"
+        app:layout_constraintTop_toBottomOf="@+id/conf_password_txt_log" />
+
+    <EditText
+        android:id="@+id/name_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="Enter Your Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/email_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_login"
+        app:layout_constraintTop_toBottomOf="@+id/LogView" />
+
+    <EditText
+        android:id="@+id/email_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Your Email-Id"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/username_txt_log"
+        app:layout_constraintEnd_toEndOf="@+id/username_txt_log"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username_txt_log"
+        app:layout_constraintTop_toBottomOf="@+id/name_login"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <ImageView
+        android:id="@+id/imageUserLogin"
+        android:layout_width="136dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/username_txt_log"
+        app:layout_constraintTop_toBottomOf="@+id/username_txt_log"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/submitUserImageLogin"
+        android:layout_width="61dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:text="Upload"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/imageUserLogin"
+        app:layout_constraintTop_toBottomOf="@+id/imageUserLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
